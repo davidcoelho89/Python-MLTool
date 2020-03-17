@@ -25,5 +25,4 @@ def stats_1turn(DATA,OUT):
     
     STATS = {'Mconf': Mconf, 'acc': acc}
     
-    return STATS
-    
+    return STATS   

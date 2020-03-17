@@ -8,7 +8,7 @@ import numpy as np           # Work with matrices (arrays)
 import pandas as pd          # Load csv files
 import math                  # Math Operations
 
-def data_class_loading(OPT):
+def class_loading(OPT):
     
     choice = OPT['prob1']
     
@@ -71,7 +71,7 @@ def normalize(DATA,OPT):
     
     return DATA
     
-def label_adjust(DATA,OPT):
+def label_encode(DATA,OPT):
     
     choice = OPT['lbl']
     labels_in = DATA['output']

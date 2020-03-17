@@ -10,7 +10,7 @@ class OLS:
     def __init__(self, aprox=1):
         
         # Model Hyperparameters
-        self.aprox = 1
+        self.aprox = aprox
         
         # Data used for model building
         self.x = None
