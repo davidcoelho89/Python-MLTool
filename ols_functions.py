@@ -46,12 +46,12 @@ def train(DATA,PAR):
     Min = np.insert(Min,0,1,axis=0)
     
     if (aprox == 1):
+        W = np.dot(Mout,pinv(Min))
+    elif (aprox == 2):
         mat_inv = np.dot(Min,Min.T)
         mat_inv = inv(mat_inv)
         W = np.dot(Mout,Min.T)
         W = np.dot(W,mat_inv)
-    elif (aprox == 2):
-        W = np.dot(Mout,pinv(Min))
     
     PAR['W'] = W
     return PAR

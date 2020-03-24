@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+"""
+OLS Classifier Class Module
+"""
 
 import numpy as np
 from numpy.linalg import inv
@@ -19,13 +22,17 @@ class OLS:
         # Model Parameters
         self.W = None
         
-    def fit(self, X, Y, verboses=0):
-        
+    def fit(self,X,Y,verboses=0):
+	    # Hold data used for model building
         self.x = X
         self.y = Y
-        
+		
+		# Use [p+1 x N] and [Nc x N] notation
+        X = X.T
         X = np.insert(X,0,1,axis=0)
-        
+        Y = Y.T
+		
+		# Calculate W [Nc x p+1]
         if (self.aprox == 1):
             self.W = np.dot(Y,pinv(X))
         elif (self.aprox == 2):
@@ -35,8 +42,15 @@ class OLS:
             self.W = np.dot(self.W,Minv)
         
     def predict(self,X):
-        
+		
+		# Use [p x N] notation
+        X = X.T
         X = np.insert(X,0,1,axis=0)
+		
+		# Algorithm
         yh = np.dot(self.W,X)
-        
+		
+		# Use [N x Nc] notation
+        yh = yh.T
+		
         return yh        
