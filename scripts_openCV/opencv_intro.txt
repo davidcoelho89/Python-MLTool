@@ -1,0 +1,45 @@
+-----> Intro
+
+-> OpenCV: Open Source Computer Vision Library
+
+-> Available in: C, C++, Python
+
+-> Images
+
+- Stored in a matrix. Each pixel have a position.
+- Gray Scale or Colored.
+- Gray Scale: [0 255] (just one channel in each position)
+- Colored: RGB - [0 255] (3 channels in each position)
+
+-> Numpy
+
+- All OpenCV arrays can be converted from/to Numpy arrays
+
+-----> Install OpenCV (using anaconda prompt)
+
+-> First install python.
+
+-> Verify versions
+
+- Open prompt
+- type: python --version
+- type: pip --version
+
+-> Install OpenCV
+
+- type: pip install opencv-python
+
+-> Verify version
+
+- type: python
+- type: import cv2
+- type: cv2.__version__
+
+-> Obs: "return from python compiler": ctrl + z
+
+-----> 
+
+-----> 
+
+-----> 
+
